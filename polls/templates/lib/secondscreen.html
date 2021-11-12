@@ -21,7 +21,9 @@
             <br>
             <div class="button">
                 <button type="button" class="form_button" name="button">
-                    <a href="#">About creator</a>
+                    {% for Package in Package %}
+                    <a target="_blank" href="{{ Package.aboutus }}">About creator</a>
+                      {% endfor %}
                 </button>
             </div>
         </div>
