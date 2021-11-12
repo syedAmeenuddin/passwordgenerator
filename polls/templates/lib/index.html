@@ -1,0 +1,67 @@
+{% extends "lib/base.html" %}
+{% load static %}
+
+  {% block content %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+
+  </head>
+  <body>
+
+    <div class="main-container">
+           <div class="title">
+               <h1>Password Generator</h1>
+           </div>
+
+           <!-- modify -->
+           <div class="form_container">
+            <form action="{% url 'ss' %}"  class="formm">
+                <div class="df">
+                  <h6 class="pr-20">Select password length : </h6>
+                  <select class="select_option" name="lenght">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6" selected='6'>6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+
+                  </select>
+                </div>
+
+                <br>
+                   <div class="selectinputs df">
+                     <h6 class="pr-20">Select the types:</h6>
+                     <div class="">
+                       <input type="checkbox" name="uppercase"> Uppercase
+                       <br>
+                       <input type="checkbox" name="number"> Number
+                       <br>
+                       <input type="checkbox" name="special"> Special Character
+                     </div>
+                   </div>
+                <br>
+                <input type="submit" class="form_button" value="Generate Password">
+                </form>
+           </div>
+
+
+
+
+       </div>
+
+
+  </body>
+</html>
+   {% endblock %}

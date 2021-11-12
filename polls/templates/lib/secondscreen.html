@@ -1,0 +1,29 @@
+{% extends "lib/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="div container">
+        <div class="title">
+            <h1>Password Generator</h1>
+        </div>
+        <br>
+        <div class="form_container">
+            <div class="df">
+                <h6 class="pr-20">Generated Pasword:</h6>
+                <p class="result">{{password}}</p>
+            </div>
+            <br>
+            <div class="button">
+                <button type="button" class="form_button" name="button">
+                    <a href="{% url 'home' %}">previous page</a>
+                </button>
+            </div>
+            <br>
+            <div class="button">
+                <button type="button" class="form_button" name="button">
+                    <a href="#">About creator</a>
+                </button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
